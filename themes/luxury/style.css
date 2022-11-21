@@ -59,3 +59,38 @@ Use it to make something cool, have fun, and share what you've learned with othe
  * Normalizing styles have been helped along thanks to the fine work of
  * Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
  */
+:root {
+    --accent-primary: #b9764c;
+    --accent-secondary: #c2b59b;
+}
+
+.si svg {
+    height: 25px;
+    width: auto;
+    fill: var(--accent-secondary);
+}
+
+.svg-icon {
+    /* border: 1px solid black; */
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.svg-icon,
+.svg-icon path {
+    transition: all .25s ease-in-out;
+}
+
+/* a:hover .svg-icon {
+    background: var(--accent-primary);
+    border-color: var(--accent-primary);
+} */
+
+a:hover .svg-icon path {
+    fill: var(--accent-primary);
+}

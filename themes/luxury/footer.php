@@ -17,9 +17,15 @@
 <div class="col-md-12 sm-text-center">
 <div class="">
 <div class="col-md-1 margin-lr-auto">
-<a href="<?php echo home_url(); ?>">
+<?php
+echo '<a href="' . home_url() . '">';
+$logoFooter = get_field('logo_footer','options');
+echo wp_get_attachment_image($logoFooter['id'],'full','',['class'=>'','style'=>'max-width:65px;width:100%;']);
+/*
 <img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" data-rjs="images/logo-white@2x.png" alt="" class="footer-logo">
-</a>
+*/
+echo '</a>';
+?>
 </div>
 <div class="col-md-9 footer-menu text-white">
 <?php wp_nav_menu(array(
@@ -28,7 +34,7 @@
 )); ?>
 </div>
 <div class="col-md-2 footer-menu">
-<a href="https://insideoutfocus.com/" target="_blank" title="Insideout"><img src="<?php echo home_url(); ?>/wp-content/uploads/2020/04/created-by-inside-out-focus.png" width="100"></a>
+<a href="https://insideoutcreative.io/" target="_blank" title="Insideout"><img src="<?php echo home_url(); ?>/wp-content/uploads/2020/04/created-by-inside-out-focus.png" width="100"></a>
 </div>
 
 <!-- <div class="col-md-5"></div> -->
@@ -56,6 +62,11 @@
 </div>
 </footer>
 <!-- end footer --> 
+<?php
+if(get_field('footer','options')):
+        echo get_field('footer','options');
+    endif;
+?>
         <!-- start scroll to top -->
         <a class="scroll-top-arrow" href="javascript:void(0);"><i class="ti-arrow-up"></i></a>
         <!-- end scroll to top  -->

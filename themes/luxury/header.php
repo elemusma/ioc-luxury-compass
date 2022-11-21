@@ -15,15 +15,12 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js no-svg">
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-171432717-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-171432717-1');
-</script>
+<?php 
+if(get_field('header','options')):
+    echo get_field('header','options');
+endif;
+?>
 
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -71,6 +68,11 @@
 </head>
 
 <body <?php body_class(); ?>>
+<?php
+if(get_field('body','options')):
+    echo get_field('body','options');
+endif;
+?>
 <!-- start header -->
 <header>
 <!-- start navigation -->
@@ -91,9 +93,15 @@
 </div>
 <div class="hamburger-menu-wrepper xs-text-center">
 <div class="hamburger-logo text-left">
-<a class="logo" href="<?php echo home_url(); ?>">
+<?php
+echo '<a class="logo" href="' . home_url() . '">';
+$logo = get_field('logo','options');
+echo wp_get_attachment_image($logo['id'],'full','',['class'=>'','style'=>'max-width:925px;width:100%;']);
+/*
 <img src="<?php echo home_url(); ?>/wp-content/uploads/2020/04/Luxur-Logo.png" data-rjs="images/logo-full-white@2x.png" alt="Pofo">
-</a>
+*/
+echo '</a>';
+?>
 </div>
 <div class="btn btn-hamburger border-none">
 <button class="close-menu close-button-menu" id="close-button"></button>
@@ -120,16 +128,53 @@
     </div>
     <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12 display-table">
         <div class="display-table-cell vertical-align-middle social-style-3">
-            <span class="text-extra-large text-deep-pink alt-font display-block margin-15px-bottom">Address Here</span>
+            <!-- <span class="text-extra-large text-deep-pink alt-font display-block margin-15px-bottom">Address Here</span>
             <span class="text-medium alt-font display-block font-weight-300 margin-15px-bottom line-height-30">P.O Box 1783<br>Windermere<br>FL 34786<br/>Email - <a href="mailto:Info@theluxurycompass.com" class="text-white" target="_blank">Info@theluxurycompass.com</a></span>
-            <div class="separator-line-horrizontal-medium-light2 bg-deep-pink margin-25px-tb xs-margin-15px-tb display-inline-block"></div>
-            <div class="social-icon-style-9">
+            <div class="separator-line-horrizontal-medium-light2 bg-deep-pink margin-25px-tb xs-margin-15px-tb display-inline-block"></div> -->
+            <?php 
+            echo '<div class="text-white">';
+            echo get_field('website_message','options');
+            echo '</div>';
+
+            if(have_rows('social_icons','options')): 
+                echo '<div class="si d-flex flex-wrap justify-content-end" style="display:flex;">';
+                while(have_rows('social_icons','options')): the_row(); 
+            $svgOrImg = get_sub_field('svg_or_image');
+            $socialLink = get_sub_field('link');
+            $svg = get_sub_field('svg');
+            $image = get_sub_field('image');
+            
+            $socialLink_url = $socialLink['url'];
+            $socialLink_title = $socialLink['title'];
+            $socialLink_target = $socialLink['target'] ? $socialLink['target'] : '_self';
+            
+            echo '<a href="' . $socialLink_url . '" target="' . $socialLink_target . '" style="text-decoration:none;" class="si-icon-link">';
+            
+            if($svgOrImg == 'SVG') {
+            
+            echo '<div class="svg-icon">';
+            echo $svg;
+            echo '</div>';
+            } elseif($svgOrImg == 'Image') {
+            
+            echo wp_get_attachment_image($image['id'],'full','',['class'=>'img-si']);
+            
+            }
+            echo '</a>';
+            
+            endwhile; 
+            
+            echo '</div>';
+            endif; 
+            ?>
+
+            <!-- <div class="social-icon-style-9">
                 <ul class="small-icon">
                     <li><a class="margin-20px-right twitter" href="https://twitter.com/TracySolly" target="_blank"><i class="fab fa-twitter"></i></a></li>
                     <li><a class="margin-20px-right twitter" href="https://www.linkedin.com/company/the-luxury-compass/about/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
                     <li><a class="margin-20px-right twitter" href="https://www.instagram.com/tracy_a_solly/" target="_blank"><i class="fab fa-instagram"></i></a></li>
                 </ul>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
