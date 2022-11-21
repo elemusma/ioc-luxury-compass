@@ -1,0 +1,24 @@
+/* adds space between logo and content on nav menu */
+@media screen and (min-width:992px) {
+.menu-wrapper .col-lg-8.col-md-8.col-sm-7.col-xs-12.display-table {
+    padding-top: 220px;
+}
+.menu-wrapper .col-lg-4.col-md-4.col-sm-5.col-xs-12.display-table {
+    padding-top: 220px;
+}
+}
+.mobile-toggle:hover span, .white-link .mobile-toggle:hover span {
+    background: #b9764c;
+}
+@media screen and (max-width:767px){
+nav.navbar.bootsnav .btn-hamburger .navbar-toggle {
+    top: 5px;
+    left: 10px;
+}
+.hamburger-menu-wrepper .btn.btn-hamburger {
+    top: 265px;
+}
+.hamburger-menu-wrepper .menu-wrapper.display-table-cell {
+    padding-top: 75px;
+}
+}

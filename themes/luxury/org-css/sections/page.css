@@ -1,0 +1,37 @@
+.about-details .page.details .bodoni {
+    transform: translate(5%, 30%);
+    margin-bottom:27px;
+}
+.long-content.row {
+    background:rgb(228, 232, 239);
+    margin-top:30px !important;
+    padding-top:150px;
+    padding-bottom:80px;
+    background:linear-gradient(115deg, rgba(228,232,239,1) 35%, #D4C5B0 60%);
+    box-shadow:0px 20px 60px -30px #000000;
+    border-style:double;
+    border-color:#435368;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    width:100%;
+}
+.long-content .content{
+    padding:10px 30px;
+}
+.long-content .content h6 {
+    letter-spacing: 0;
+    /* border-left: 5px solid #F4AC45; */
+    border-left: 5px solid #b9764c;
+    padding-left: 18px;
+}
+.long-content .content p{
+    font-size:1.75rem;
+    line-height: 1.5;
+    /* text-shadow: 0.5px 0.5px white; */
+}
+@media screen and (min-width:992px){
+.offset-right {
+    transform: translate(100px, 0);
+}
+}

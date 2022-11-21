@@ -1,0 +1,90 @@
+input.wpcf7-form-control.wpcf7-submit {
+    background: #b9764c;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    box-shadow: none;
+}
+.cf-btn-bottom {
+    text-align: center;
+    margin-bottom: -16.5rem;
+}
+/* file upload button */
+input.wpcf7-form-control.wpcf7-file {
+    position: absolute;
+    width: 1500px;
+    height: 1000px;
+    right: 0;
+    bottom: 0;
+    outline: none !important;
+    margin-bottom: 0;
+    box-shadow: none;
+    border: 1px;
+}
+span.wpcf7-form-control-wrap.file-946 {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    height: 40px;
+    border-radius: 15px;
+    background: #5f5c68;
+    color: #FFF;
+    overflow: hidden;
+}
+input.wpcf7-form-control.wpcf7-file:before {
+    content: "Upload a File";
+    display: block;
+    width: 200px;
+    height: 60px;
+    line-height: 80px;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    color: #FFF;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+/* end of file upload button */
+.wpcf7 input, .wpcf7 textarea {
+    box-shadow: inset 0px 3px 5px rgba(0, 0, 0, .25);
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #8e8b97 !important;
+    font-weight:600;
+    opacity: 1;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #8e8b97 !important;
+    font-weight:600;
+    opacity: 1;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #8e8b97 !important;
+    font-weight:600;
+    opacity: 1;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #8e8b97 !important;
+    font-weight:600;
+    opacity: 1;
+    }
+.contact-form p {
+    color: white;
+    font-weight: 900;
+    text-shadow: 0.5px 0.5px black;
+}
+.contact-form p a {
+    color: white;
+    text-decoration: underline;
+}
+.wpcf7-response-output {
+    transform: translate(0, 150px);
+}
+.wpcf7 form.sent .wpcf7-response-output {
+    background: #46b450;
+    color: white;
+}

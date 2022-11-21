@@ -1,0 +1,72 @@
+@media screen and (max-width:991px){
+    .hero-border {
+        display: none;
+    }
+    #home .menu img {
+        height: 25px;
+        width: 150px;
+        object-fit: contain;
+    }
+    .menu {
+        width: 60%;
+        top: 100px;
+    }
+    /* about section */
+    .about {
+        margin-top: 28px;
+        padding-bottom: 9px;
+    }
+    /* inside content of blurb section */
+    .about .page.details {
+        padding-top: 27px;
+    }
+    /* for regular pages */
+    .about-section .img--main {
+        display: none;
+    }
+    /* footer menu */
+    ul#menu-main-menu-1 {
+        display: block;
+        padding-bottom: 18px;
+    }
+    /* slider */
+    .market-section:after {
+        display:none;
+    }
+    /* title */
+    .markets-title h2 {
+        font-size: 5rem;
+    }
+    /* main slider image section */
+    img.img-slider-main {
+        width: calc(100% - 50px);
+    }
+    /* aligns photos with border */
+    .swiper-slide.team-block.text-left.team-style-1.wow.fadeInUp {
+        padding: 0 50px 0 50px;
+    }
+    p.phone {
+        line-height: 1.25;
+    }
+    /* contact form buttons */
+    .cf-btn-bottom {
+        margin-bottom: -14rem;
+    }
+    /* footer logo */
+    img.footer-logo {
+        width: 50%;
+    }
+    }
+    
+    @media screen and (max-width:767px){
+    .phone a {
+        font-size: 3.25rem;
+    }
+    .contact-form .col-md-8 {
+        margin: 0 !important;
+    }
+    /* contact form buttons */
+    .cf-btn-bottom {
+        margin-bottom: -11rem;
+    }
+    }

@@ -1,0 +1,15 @@
+footer {
+    border-top: 1rem solid #3b3b3b;
+    border-bottom: 1rem solid #3b3b3b;
+    background: #5f5c68;
+}
+footer .col-md-2, .col-md-8 {
+    height: unset !important;
+}
+ul#menu-main-menu-1 {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 0;
+}

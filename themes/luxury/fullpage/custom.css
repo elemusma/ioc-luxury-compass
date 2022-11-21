@@ -1,0 +1,85 @@
+/* content section */
+.bar {
+    background: #C8B69B;
+    height: 10px;
+    min-width: 250px;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bar.top{
+    margin-bottom:45px;
+}
+.bar.bottom{
+    margin-top:45px;
+}
+.content {
+    background: rgba(0, 0, 0, 0.5);
+}
+/* content font */
+.section h2{
+    font-size:6rem;
+    margin-bottom:18px;
+}
+/* navigation menu on the side */
+div#fp-nav {
+    z-index: 2;
+    top: 60%;
+}
+#fp-nav ul li a span, #fp-nav ul li a.active span {
+    background:transparent;
+    width: 0;
+}
+#fp-nav ul li, .fp-slidesNav ul li {
+    width: 110px;
+    border-right: 2px solid #C8B69B;
+    margin-top: 9px !important;
+    height: 25px;
+    overflow: visible;
+}
+/* for active nav tab */
+.active ~ .fp-tooltip.fp-right {
+    background: white;
+    padding: 0px 19px;
+    font-weight: 900;
+    color: black !important;
+    text-transform: uppercase;
+    right: 0 !important;
+    margin-right: 19px;
+    text-shadow: none !important;
+}
+/* for hover */
+#fp-nav ul li .fp-tooltip {
+    overflow: visible !important;
+    width: auto;
+    opacity: 1;
+    color: #C8B69B;
+    font-weight: 700;
+    text-shadow: 1px 1px black;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+#fp-nav ul li:hover a span, .fp-slidesNav ul li:hover a span {
+    width: 2px !important;
+    margin-left: 0 !important;
+    height: 36px !important;
+}
+#fp-nav ul li, .fp-slidesNav ul li {
+    height: 36px;
+    margin: 0;
+}
+@media screen and (max-width:767px){
+    #fp-nav.fp-right {
+        display: none;
+    }
+    .section h2 {
+        font-size: 4rem;
+    }
+    .intro p {
+        width: 90%;
+        font-size: 1.5rem;
+    }
+    .content {
+        background: rgba(0, 0, 0, 0.65);
+    }
+}

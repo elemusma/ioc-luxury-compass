@@ -1,0 +1,13 @@
+@media screen and (min-width:1199px){
+    .swiper-slide-active + .swiper-slide-next img {
+        margin-top: 9rem;
+    }
+    .swiper-slide-active + .swiper-slide-next .explore-title {
+        padding-bottom:120px !important;
+    }
+}
+@media screen and (min-width:1024px){
+    .swiper-slide-active + .swiper-slide-next img {
+        margin-top: 4rem;
+    }
+}

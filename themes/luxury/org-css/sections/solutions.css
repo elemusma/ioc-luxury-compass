@@ -1,0 +1,50 @@
+.overlay {
+    height:0px;
+    transition:1s;
+}
+.feature-box-13:hover .overlay {
+    background: rgba(0, 0, 0, .5);
+    position: absolute;
+    height: 95%;
+    width: 95%;
+    content: "";
+    top: 2.5%;
+    left: 2.5%;
+    z-index: -1;
+}
+.solutions:after {
+    background: rgba(185, 118, 76, .51);
+    position: absolute;
+    content: "";
+    height: 120px;
+    width: 100%;
+    top: 50%;
+    transform: translate(0, -65%);
+    z-index: 0;
+}
+
+.overlay-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+    opacity:0;
+    transition:1s ease;
+    background-position:center center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+}
+.overlay-image.show-active{
+    /* height:100%; */
+    opacity:1;
+}
+#img-appraisal.show-active {
+    background: url(/wp-content/uploads/2020/04/appraisal.jpg);
+}
+#img-marketing.show-active {
+    background: url(/wp-content/uploads/2020/04/management.jpg);
+}
+#img-management.show-active {
+    background: url(/wp-content/uploads/2020/04/marketing.jpg);
+}

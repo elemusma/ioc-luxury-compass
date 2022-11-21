@@ -1,0 +1,74 @@
+body{
+    font-family: proxima-nova, sans-serif;
+    font-weight: 400;
+}
+
+h1, h2, .bodoni,span.big-input{
+    font-family: bodoni-urw, serif;
+    text-transform: uppercase;
+}
+.sans-serif {
+    font-family: sans-serif;
+}
+span.col-sm-7.alt-font.text-medium-gray.text-uppercase.text-small {
+    font-family: bodoni-urw, serif;
+    margin-bottom: 4rem;
+}
+h1{
+    margin-bottom:15px;
+}
+.name {
+    font-size: 6rem;
+    text-transform: uppercase;
+    padding-bottom: 8rem;
+}
+.bodoni.subtitle {
+    font-size: 6.75rem;
+}
+h6 {
+    font-size: 2rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+p.phone {
+    font-weight: 200;
+    font-size: 3rem;
+}
+.phone a {
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.3em;
+    font-size: 5rem;
+}
+
+@media screen and (max-width:767px){
+    .mobile-height {
+        height: 350px !important;
+    }
+    
+    #home img {
+        height: 350px;
+        object-fit: cover;
+    }
+    .name {
+        font-size: 2.5rem;
+        padding-bottom: 0;
+    }
+    .bodoni.subtitle {
+        font-size: 3.5rem;
+        line-height: 1;
+        margin-bottom: 0;
+}
+h6 {
+    font-size: 1.25rem;
+}
+}
+/* Bodoni URW Regular
+font-family: bodoni-urw, serif;
+font-weight: 400, 700;
+font-style: normal, italic;
+*/
+/* Proxima Nova Bold
+font-family: proxima-nova, sans-serif;
+font-weight: 400, 700;
+font-style: normal, italic; */

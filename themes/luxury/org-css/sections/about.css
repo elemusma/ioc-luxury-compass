@@ -1,0 +1,82 @@
+.about {
+    padding: 0 0 27px;
+}
+.about-middle {
+    background: rgba(95, 92, 104, .71);
+    padding: 1rem;
+    z-index: 1;
+    position: absolute;
+    height: 100% !important;
+    width: 100%;
+    content: "";
+}
+.about-details {
+    position: relative;
+    z-index: 2;
+}
+.about img {
+    margin-left: -30px;
+    margin-top: -30px;
+    max-width: 150px !important;
+}
+
+.about-before {
+    background: rgba(134, 169, 192, .5);
+    top: -50px;
+    right: 20px;
+    position: absolute;
+    height: 65%;
+    width: 65%;
+    content: "";
+    opacity:25%
+}
+.about-first-half {
+    background: white;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+}
+.about-after {
+    content: "";
+    background: #b5a59c;
+    width: 25%;
+    height: 90%;
+    position: absolute;
+    bottom: -20px;
+    right: -35px;
+    opacity:85%;
+    z-index: 0 !important;
+}
+.about-details .bodoni {
+    margin-bottom: 0;
+    padding-top: 24px;
+    font-size: 5.5rem;
+    line-height: 0.75;
+}
+.about-details h5 {
+    color: #beb0a9;
+    transform: translate(10%, 0);
+    transform: translate(105px, 0);
+    font-size: 3rem;
+    width: 80%;
+    font-weight: 300 !important;
+    line-height: 1;
+}
+@media screen and (max-width:767px){
+    .about-details .bodoni {
+        font-size: 4rem;
+    }
+    .about-details .page.details .bodoni {
+        transform: translate(0,0);
+    }
+    .about-details h5 {
+        font-size: 3rem;
+        transform: translate(0,0);
+        width:100%;
+    }
+    .about p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+    }
+}

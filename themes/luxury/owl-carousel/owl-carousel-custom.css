@@ -1,0 +1,19 @@
+button.owl-next,button.owl-prev {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -100%);
+    background:#c8b69b!important;
+    border-radius: 25px !important;
+    color: white !important;
+    height: 50px;
+    width: 50px;
+}
+button.owl-next{
+    right: 0;
+}
+button.owl-prev{
+    left: 5px;
+}
+button.owl-next span,button.owl-prev span {
+    font-size: 6rem !important;
+}
