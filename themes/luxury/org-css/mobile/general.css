@@ -43,7 +43,7 @@
 
     /* title */
     .markets-title h2 {
-        font-size: 5rem;
+        font-size: 7rem !important;
     }
 
     /* main slider image section */
